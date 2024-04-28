@@ -6,7 +6,7 @@ from imblearn.over_sampling import RandomOverSampler
 from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeClassifier
 
-data = pd.read_csv('hotel Reservations.csv', encoding='ISO-8859-1')
+data = pd.read_csv('Hotel Reservations.csv')
 df = pd.DataFrame(data)
 df = df.drop(columns=['Booking_ID'])
 
