@@ -80,7 +80,7 @@ meal_plan_index = meal_plan_mapping[selected_meal_plan]
 room_type_index = room_type_mapping[selected_room_type]
 market_segment_index = market_segment_mapping[selected_market_segment]
 
-if st.button("Click Me", type="primary"):
+if st.button("Predict", type="primary"):
     data_test = [no_of_adults,no_of_children,no_of_weekend_nights,no_of_week_nights,meal_plan_index,parking_needed_value,room_type_index,lead_Time,Arrival_Year,Arrival_Month,Arrival_Date,market_segment_index,repeated_guest_value,no_of_previous_cancellations,no_of_previous_booking_not_canceled,avg_price,no_of_special_request]
 
     df_test = pd.DataFrame(data=[data_test])
