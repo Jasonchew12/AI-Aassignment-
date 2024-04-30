@@ -45,7 +45,7 @@ meal_plan_mapping = {"Not Selected": 0, "Meal Plan 1": 1, "Meal Plan 2": 2, "Mea
 room_type_mapping = {"Room Type 1": 0, "Room Type 2": 1, "Room Type 3": 2, "Room Type 4": 3,
                      "Room Type 5": 4, "Room Type 6": 5, "Room Type 7": 6}
 market_segment_mapping = {"Offline": 0, "Online": 1, "Corporate": 2, "Avitation": 3, "Complementary": 4}
-st.title("Hotel Cancellation Predirction")
+st.title("Hotel Cancellation Prediction")
 st.subheader("Booking Details")
 no_of_adults = st.number_input(label="Number of Adults", step=1)
 no_of_children = st.number_input(label="Number of Children", step=1)
