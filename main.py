@@ -98,5 +98,4 @@ if st.button("Predict", type="primary"):
     elif prediction == 1:
         str_prediction = 'Not Canceled'
 
-    st.write(pd.DataFrame(df_test))
     st.write("Prediction result:", str_prediction)
