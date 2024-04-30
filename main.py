@@ -21,13 +21,11 @@ for col in df.columns:
 
 encoded_df = df.copy()
 
-
 encoded_df['type_of_meal_plan'] = encoded_df['type_of_meal_plan'].replace({'not selected': 0, 'meal plan 1': 1, 'meal plan 2': 2, 'meal plan 3': 3})
 encoded_df['room_type_reserved'] = encoded_df['room_type_reserved'].replace({'room type 1': 0, 'room type 2': 1, 'room type 3': 2, 'room type 4': 3,
                                                              'room type 5': 4, 'room type 6': 5, 'room type 7': 6})
 encoded_df['market_segment_type'] = encoded_df['market_segment_type'].replace({'offline': 0, 'online': 1, 'corporate': 2, 'aviation': 3, 'complementary': 4})
 
-st.write(encoded_df)
 encoded_df['booking_status'] = encoded_df['booking_status'].replace({'canceled': 0, 'not canceled': 1})
 X = encoded_df[['no_of_adults', 'no_of_children','no_of_weekend_nights','no_of_week_nights', 'type_of_meal_plan',
                'required_car_parking_space', 'room_type_reserved', 'lead_time', 'arrival_year', 'arrival_month',
