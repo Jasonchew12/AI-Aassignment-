@@ -47,10 +47,10 @@ room_type_mapping = {"Room Type 1": 0, "Room Type 2": 1, "Room Type 3": 2, "Room
 market_segment_mapping = {"Offline": 0, "Online": 1, "Corporate": 2, "Avitation": 3, "Complementary": 4}
 st.title("Hotel Cancellation Prediction")
 st.subheader("Booking Details")
-no_of_adults = st.number_input(label="Number of Adults", step=1)
-no_of_children = st.number_input(label="Number of Children", step=1)
-no_of_weekend_nights = st.number_input(label="Number of Weekend nights", step=1)
-no_of_week_nights = st.number_input(label="Number of Week Night", step=1)
+no_of_adults = st.number_input(label="Number of Adults",min_value=0, step=1)
+no_of_children = st.number_input(label="Number of Children",min_value=0, step=1)
+no_of_weekend_nights = st.number_input(label="Number of Weekend nights",min_value=0, step=1)
+no_of_week_nights = st.number_input(label="Number of Week Night",min_value=0, step=1)
 lead_Time = st.number_input(label="Lead Time", min_value=1,max_value=300, step=1)
 selected_meal_plan = st.selectbox("Select a meal plan:", list(meal_plan_mapping.keys()), index=0)
 selected_room_type = st.selectbox("Select a room type:", list(room_type_mapping.keys()), index=0)
@@ -63,12 +63,12 @@ Arrival_Month = st.number_input(label="Arrival Month",min_value=1,max_value=12, 
 Arrival_Date = st.number_input(label="Arrival Date", min_value=1,max_value=31, step=1)
 
 st.subheader("Booking History")
-no_of_previous_cancellations = st.number_input(label="Number of Previous Cancellations", step=1)
-no_of_previous_booking_not_canceled = st.number_input(label="Number of Previous Booking not Canceled", step=1)
+no_of_previous_cancellations = st.number_input(label="Number of Previous Cancellations",min_value=0, step=1)
+no_of_previous_booking_not_canceled = st.number_input(label="Number of Previous Booking not Canceled",min_value=0, step=1)
 repeated_guest_value = int(st.checkbox("Repeated Guest?"))
 
 st.subheader("Special Requests")
-no_of_special_request = st.number_input(label="Number of Special Requests", step=1)
+no_of_special_request = st.number_input(label="Number of Special Requests",min_value=0, step=1)
 
 st.subheader("Financial Information")
 avg_price = st.number_input(label="Average Room Price",max_value=600.00, step=0.01)
