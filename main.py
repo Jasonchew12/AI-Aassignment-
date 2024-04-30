@@ -51,7 +51,7 @@ no_of_adults = st.number_input(label="Number of Adults", step=1)
 no_of_children = st.number_input(label="Number of Children", step=1)
 no_of_weekend_nights = st.number_input(label="Number of Weekend nights", step=1)
 no_of_week_nights = st.number_input(label="Number of Week Night", step=1)
-lead_Time = st.number_input(label="Lead Time", min=1,max=300, step=1)
+lead_Time = st.number_input(label="Lead Time", min_value=1,max_value=300, step=1)
 selected_meal_plan = st.selectbox("Select a meal plan:", list(meal_plan_mapping.keys()), index=0)
 selected_room_type = st.selectbox("Select a room type:", list(room_type_mapping.keys()), index=0)
 selected_market_segment = st.selectbox("Select a market segment:", list(market_segment_mapping.keys()), index=0)
@@ -59,8 +59,8 @@ parking_needed_value = int(st.checkbox("Parking Needed?"))
 
 st.subheader("Arrival Information")
 Arrival_Year = st.number_input(label="Arrival Year", step=1)
-Arrival_Month = st.number_input(label="Arrival Month",min=1,max=12, step=1)
-Arrival_Date = st.number_input(label="Arrival Date", min=1,max=31, step=1)
+Arrival_Month = st.number_input(label="Arrival Month",min_value=1,max_value=12, step=1)
+Arrival_Date = st.number_input(label="Arrival Date", min_value=1,max_value=31, step=1)
 
 st.subheader("Booking History")
 no_of_previous_cancellations = st.number_input(label="Number of Previous Cancellations", step=1)
@@ -71,7 +71,7 @@ st.subheader("Special Requests")
 no_of_special_request = st.number_input(label="Number of Special Requests", step=1)
 
 st.subheader("Financial Information")
-avg_price = st.number_input(label="Average Room Price",min=1,max=600, step=0.01)
+avg_price = st.number_input(label="Average Room Price",min_value=1,max_value=600, step=0.01)
 
 
 
