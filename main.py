@@ -71,7 +71,7 @@ st.subheader("Special Requests")
 no_of_special_request = st.number_input(label="Number of Special Requests", step=1)
 
 st.subheader("Financial Information")
-avg_price = st.number_input(label="Average Room Price",min_value=1,max_value=600, step=0.01)
+avg_price = st.number_input(label="Average Room Price",max_value=600.00, step=0.01)
 
 
 
