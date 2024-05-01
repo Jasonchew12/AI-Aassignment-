@@ -107,4 +107,4 @@ if st.button("Predict", type="primary"):
     </div>
     """,
     unsafe_allow_html=True
-)
+    )
