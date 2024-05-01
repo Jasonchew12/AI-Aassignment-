@@ -100,11 +100,11 @@ if st.button("Predict", type="primary"):
         str_prediction = 'Not Canceled'
         color = "#32CD32" 
 
-   st.markdown(
+    st.markdown(
     f"""
     <div style='border: 2px solid {color}; color: {color}; padding: 10px; font-size: 20px;'>
         <b>Prediction result:</b> {str_prediction}
     </div>
     """,
     unsafe_allow_html=True
-    )
+)    
