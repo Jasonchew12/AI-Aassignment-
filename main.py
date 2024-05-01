@@ -95,7 +95,16 @@ if st.button("Predict", type="primary"):
     str_prediction = 'invalid data'
     if prediction == 0:
         str_prediction = 'Canceled'
+        color = "#FF6347" 
     elif prediction == 1:
         str_prediction = 'Not Canceled'
+        color = "#32CD32" 
 
-    st.write("Prediction result:", str_prediction)
+    st.markdown(
+    f"""
+    <div style='border: 2px solid {color}; color: {color}; padding: 10px;'>
+        <b>Prediction result:</b> {str_prediction}
+    </div>
+    """,
+    unsafe_allow_html=True
+    )
