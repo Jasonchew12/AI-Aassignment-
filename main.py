@@ -100,9 +100,15 @@ if st.button("Predict", type="primary"):
         str_prediction = 'Not Canceled'
         color = "#32CD32" 
 
+    if str_prediction == "cancel":
+    color = "#FF6347"  # Red-ish color for "cancel"
+else:
+    color = "#32CD32"  # Green color for "not"
+
+# Using Markdown to add HTML for styling with conditional colors and bigger text
     st.markdown(
     f"""
-    <div style='border: 2px solid {color}; color: {color}; padding: 10px;'>
+    <div style='border: 2px solid {color}; color: {color}; padding: 10px; font-size: 20px;'>
         <b>Prediction result:</b> {str_prediction}
     </div>
     """,
