@@ -100,7 +100,7 @@ if st.button("Predict", type="primary"):
     elif prediction == 1:
         str_prediction = 'Not Canceled'
         color = "#32CD32"
-         background_color = "#E0FFD1"
+        background_color = "#E0FFD1"
 
     st.markdown(
     f"""
